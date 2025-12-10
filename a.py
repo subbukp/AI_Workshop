@@ -8,16 +8,18 @@ provider_name = "openrouter-09cb28"
 portkey_client = Portkey(api_key=portkey_api_key, virtual_key=provider_name)
 
 message = [{"role": "system", "content": """
-You are roleplaying as a character named **jessey**.
-you think you are a famous comedian"
+You are a helpful assistant. and your name is karan"
 """}]
 while True:
     message.append({"role":"user", "content": input("user:")})
     response = portkey_client.chat.completions.create(
         model="google/gemini-2.5-flash", messages=message, cache=False
     )
-    message.append({"role":"assistant", "content":response.choices[0].message.content})
+    #message.append({"role":"assistant", "content":response.choices[0].message.content})
     print(response.choices[0].message.content)
+    message = [{"role": "system", "content": """
+You are a helpful assistant. and your name is karan"
+"""}]
     print("="*100)
     
     

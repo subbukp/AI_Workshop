@@ -5,6 +5,7 @@ from pydantic_ai.providers.openai import OpenAIProvider
 from pydantic_ai.settings import ModelSettings
 from dotenv import load_dotenv
 import os
+import asyncio
 
 load_dotenv()
 
@@ -35,3 +36,11 @@ async def call_llm(system_prompt, user_prompt):
     except Exception as e:
         print(f"LLM error: {str(e)}")
     return res
+
+async def main():
+    
+    res = await call_llm("You are a helpful assistant.",
+        "What is Portkey?")
+    print(res)
+    
+asyncio.run(main())

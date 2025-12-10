@@ -24,6 +24,7 @@ An evaluation framework is a structured approach used to assess the performance,
 - **OpenAI Documentation**: [Overview](https://platform.openai.com/docs/overview)
 - **LangChain LangGraph**: [Official Site](https://www.langchain.com/langgraph)
 - **Pydantic AI - OpenAI Models**: [Documentation](https://ai.pydantic.dev/models/openai/)
+- https://mem0.ai/
 
 ## Notes
 _Workshop notes and learnings to be added throughout the day..._
